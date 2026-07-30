@@ -206,6 +206,9 @@ nav{position:fixed;inset:0 0 auto;z-index:300;background:rgba(255,255,255,.92);b
 
 /* WHY */
 #why{background:var(--ice)}
+.why-headline{margin-bottom:32px}
+.why-headline h2{font-size:clamp(26px,3.2vw,38px);margin:0 0 10px}
+.why-headline p{font-size:16px;color:var(--muted);margin:0}
 .why-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
 .why-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px}
 .why-ic{width:44px;height:44px;border-radius:12px;background:var(--blue-wash);color:var(--blue);display:flex;align-items:center;justify-content:center;margin-bottom:15px}
@@ -640,9 +643,13 @@ footer a:hover{color:#fff}
   </div>
 </div>
 
-<!-- WHY CARDS — directly below climate banner, no heading -->
+<!-- WHY CARDS — directly below climate banner -->
 <section id="why">
   <div class="wrap">
+    <div class="why-headline reveal">
+      <h2>More than just cooling</h2>
+      <p>Here&rsquo;s what a well-installed system actually does for your home and your life.</p>
+    </div>
     <div class="ccar reveal" data-ccar>
       <div class="ccar-viewport">
         <div class="ccar-track">
