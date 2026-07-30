@@ -983,12 +983,12 @@ footer a:hover{color:#fff}
         <div class="ci-row"><div class="ci-ic"><svg class="ic" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><h3>Covering</h3><p>London &amp; Surrey</p></div></div>
         <div class="ci-row"><div class="ci-ic"><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div><h3>Hours</h3><p>Mon&ndash;Fri, 8am&ndash;5pm</p></div></div>
       </div>
-      <form class="reveal" onsubmit="event.preventDefault();this.querySelector('button').textContent='Thanks — we\'ll call you back shortly';this.querySelector('button').style.background='#0A86C4';">
-        <div class="f-row"><label for="f-name">Your name</label><input id="f-name" type="text" required autocomplete="name"/></div>
-        <div class="f-row"><label for="f-phone">Phone number</label><input id="f-phone" type="tel" required autocomplete="tel"/></div>
-        <div class="f-row"><label for="f-post">Postcode</label><input id="f-post" type="text" autocomplete="postal-code" placeholder="e.g. SM5"/></div>
+      <form class="reveal" id="contact-form">
+        <div class="f-row"><label for="f-name">Your name</label><input id="f-name" name="name" type="text" required autocomplete="name"/></div>
+        <div class="f-row"><label for="f-phone">Phone number</label><input id="f-phone" name="phone" type="tel" required autocomplete="tel"/></div>
+        <div class="f-row"><label for="f-post">Postcode</label><input id="f-post" name="postcode" type="text" autocomplete="postal-code" placeholder="e.g. SM5"/></div>
         <div class="f-row"><label for="f-need">What do you need?</label>
-          <select id="f-need">
+          <select id="f-need" name="service">
             <option>Installation (home)</option>
             <option>Installation (business)</option>
             <option>Servicing / maintenance</option>
@@ -997,10 +997,32 @@ footer a:hover{color:#fff}
             <option>Not sure, just want advice</option>
           </select>
         </div>
-        <button type="submit" class="btn btn-red">Request my free callback</button>
-        <p class="f-note">We only use your details to arrange your callback. No mailing lists, no spam.</p>
+        <button type="submit" class="btn btn-red" id="contact-submit">Request my free callback</button>
+        <p class="f-note" id="contact-note">We only use your details to arrange your callback. No mailing lists, no spam.</p>
       </form>
-      <script>document.querySelector('form').addEventListener('submit',function(e){e.preventDefault();var b=this.querySelector('button');b.textContent='Thanks, we\'ll call you back shortly';b.style.background='#0A86C4';});</script>
+      <script>
+      document.getElementById('contact-form').addEventListener('submit',function(e){
+        e.preventDefault();
+        var btn=document.getElementById('contact-submit');
+        var note=document.getElementById('contact-note');
+        btn.textContent='Sending...';btn.disabled=true;
+        var data={name:this.name.value,phone:this.phone.value,postcode:this.postcode.value,service:this.service.value,'_subject':'New enquiry from RA Cooling website'};
+        fetch('https://formsubmit.co/ajax/ra.cooling@hotmail.com',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},body:JSON.stringify(data)})
+        .then(function(r){return r.json();})
+        .then(function(r){
+          if(r.success){
+            btn.textContent='Thanks — we\'ll call you back shortly';
+            btn.style.background='#0A86C4';
+            note.textContent='Your details have been sent. Ramiz will be in touch soon.';
+          }else{throw new Error();}
+        })
+        .catch(function(){
+          btn.textContent='Request my free callback';btn.disabled=false;
+          note.textContent='Something went wrong — please call us directly on 07480 247540.';
+          note.style.color='var(--red)';
+        });
+      });
+      </script>
     </div>
   </div>
 </section>
