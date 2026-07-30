@@ -155,7 +155,7 @@ nav{position:fixed;inset:0 0 auto;z-index:300;background:rgba(255,255,255,.92);b
 /* SYSTEMS — illustrated carousel (scoped: sysc-*) */
 #systems{background:var(--ice)}
 .sys-lead{font-size:17px;color:var(--ink-2);margin-bottom:28px;max-width:730px}
-.sys-cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
+.sys-cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px;justify-content:center}
 .sys-lead b{color:var(--ink)}
 .sysc{position:relative;margin-bottom:26px}
 .sysc-viewport{overflow:hidden;cursor:grab}
@@ -383,6 +383,7 @@ footer a:hover{color:#fff}
 .hp-note{background:var(--ink);border-radius:14px;padding:24px 26px}
 .hp-note p{color:#9FB4C4;font-size:14.5px;margin:0;line-height:1.65}
 .hp-note b{color:#fff}
+.hp-intro-cta{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-top:36px}
 
 /* RESPONSIVE ADDITIONS */
 @media(max-width:760px){
@@ -781,54 +782,31 @@ footer a:hover{color:#fff}
   </div>
 </section>
 
-<!-- AIR-TO-AIR HEAT PUMP EXPLAINER -->
+<!-- AIR-TO-AIR HEAT PUMP INTRO -->
 <section id="heatpump">
   <div class="wrap">
     <div class="sec-head center reveal">
       <span class="eyebrow">The technology</span>
-      <h2>How an air-to-air heat pump works</h2>
-      <p>Modern air conditioning systems are heat pumps. Understanding the technology explains why they&rsquo;re so much more efficient than any other form of electric heating or cooling.</p>
+      <h2>Introducing the air-to-air heat pump</h2>
+      <p>The same unit that keeps you cool in summer can heat your home in winter &mdash; up to 5 times more efficiently than a standard electric heater. One system, year-round comfort, lower bills.</p>
     </div>
     <div class="hp-stats reveal">
       <div class="hp-stat">
         <div class="hp-stat-n">3&ndash;5&times;</div>
-        <div class="hp-stat-l">more energy delivered than electricity consumed (COP 3&ndash;5)</div>
+        <div class="hp-stat-l">more efficient than electric heating</div>
       </div>
       <div class="hp-stat">
         <div class="hp-stat-n">&minus;15&deg;C</div>
-        <div class="hp-stat-l">outside temperature at which modern units still heat effectively</div>
+        <div class="hp-stat-l">outside temperature it still heats effectively</div>
       </div>
       <div class="hp-stat">
         <div class="hp-stat-n">2&ndash;in&ndash;1</div>
-        <div class="hp-stat-l">same system heats in winter and cools in summer</div>
+        <div class="hp-stat-l">cools in summer, heats in winter</div>
       </div>
     </div>
-    <div class="hp-grid">
-      <div class="hp-modes reveal">
-        <div class="hp-mode">
-          <div class="hp-mode-ic cool"><svg class="ic" viewBox="0 0 24 24"><path d="M12 2v20M4.5 6.5 12 11l7.5-4.5M4.5 17.5 12 13l7.5 4.5M2 12h20"/></svg></div>
-          <h3>Cooling mode, summer</h3>
-          <p>The indoor unit draws warm room air across a cold refrigerant coil, absorbing the heat. A compressor raises the pressure and temperature of the refrigerant, then pumps it to the outdoor unit where a fan disperses the heat outside. The cooled refrigerant cycles back and your room air returns noticeably cooler.</p>
-        </div>
-        <div class="hp-mode">
-          <div class="hp-mode-ic heat"><svg class="ic" viewBox="0 0 24 24"><path d="M12 2c1 3 4 4 4 8a4 4 0 1 1-8 0c0-4 3-5 4-8z"/></svg></div>
-          <h3>Heating mode, winter</h3>
-          <p>The cycle runs in reverse. Even at &minus;15&deg;C there is usable heat energy in outside air. The outdoor unit extracts this latent heat into the refrigerant, the compressor concentrates it, and the indoor unit delivers warm air inside, producing 3&ndash;5 units of heat for every unit of electricity consumed.</p>
-        </div>
-      </div>
-      <div class="hp-copy reveal">
-        <h3>Why the efficiency numbers are so impressive</h3>
-        <p>A gas boiler burns fuel to <em>create</em> heat, converting roughly <b>90p of every &pound;1 of gas</b> into warmth. An electric panel heater converts electricity to heat at a flat <b>1:1</b> ratio. A heat pump doesn&rsquo;t create heat, it <b>moves</b> it. Shifting energy is far cheaper than generating it, which is why heat pumps deliver three to five times more energy as heat or cooling than they consume as electricity.</p>
-        <ul>
-          <li><svg class="ic" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span><b>Air filtration:</b> built-in filters capture dust, pollen and mould spores, improving indoor air quality throughout the year</span></li>
-          <li><svg class="ic" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span><b>Dehumidification:</b> the cooling cycle removes moisture from the air, reducing condensation and damp in kitchens, bathrooms and bedrooms</span></li>
-          <li><svg class="ic" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span><b>Lower carbon:</b> no direct combustion at the point of use. As the grid gets greener, so does your heating and cooling</span></li>
-          <li><svg class="ic" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg><span><b>Precise control:</b> room-by-room temperature settings via remote, app or smart home integration</span></li>
-        </ul>
-        <div class="hp-note">
-          <p><b>Is it right for your home?</b> Air-to-air heat pumps work best in well-insulated spaces and suit newer builds or retrofitted properties particularly well. They work alongside existing heating rather than replacing it overnight. We always carry out a <b>free survey</b> first so you know exactly what to expect before spending a penny.</p>
-        </div>
-      </div>
+    <div class="hp-intro-cta reveal">
+      <a href="#systems" class="btn btn-ghost">See our heat pump systems</a>
+      <a href="#contact" class="btn btn-red">Book a free survey</a>
     </div>
   </div>
 </section>
@@ -1126,7 +1104,7 @@ if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
   wrap.addEventListener('pointermove',function(e){if(!wdrag)return;var dx=e.clientX-tx;if(Math.abs(dx)>8)wmoved=true;track.style.transform='translateX('+(tt+dx)+'px)';});
   function endWorkDrag(e){
     if(!wdrag)return;wdrag=false;wrap.style.cursor='grab';track.style.transition='';
-    if(wmoved){stopAuto();var dx=(e.clientX||tx)-tx;if(Math.abs(dx)>40){dx<0?next():prev();}else{go(cur);}startAuto();}
+    if(wmoved){stopAuto();var dx=(e.clientX||tx)-tx;if(Math.abs(dx)>15){dx<0?next():prev();}else{go(cur);}startAuto();}
   }
   wrap.addEventListener('pointerup',endWorkDrag);
   wrap.addEventListener('pointercancel',endWorkDrag);
@@ -1206,7 +1184,7 @@ document.querySelectorAll('[data-ccar]').forEach(function(car){
   var sx=0,st=0,drag=false,moved=false;
   vp.addEventListener('pointerdown',function(e){drag=true;moved=false;sx=e.clientX;var mt=/translateX\((-?[\d.]+)px\)/.exec(track.style.transform);st=mt?parseFloat(mt[1]):0;track.style.transition='none';car.classList.add('grabbing');});
   vp.addEventListener('pointermove',function(e){if(!drag)return;var dx=e.clientX-sx;if(Math.abs(dx)>6)moved=true;track.style.transform='translateX('+(st+dx)+'px)';});
-  function endDrag(e){if(!drag)return;drag=false;car.classList.remove('grabbing');track.style.transition='';if(moved){var dx=e.clientX-sx,m=metrics();if(Math.abs(dx)>m.cardW*0.2){index+=dx<0?1:-1;}render();}}
+  function endDrag(e){if(!drag)return;drag=false;car.classList.remove('grabbing');track.style.transition='';if(moved){var dx=e.clientX-sx,m=metrics();if(Math.abs(dx)>15){index+=dx<0?1:-1;}render();}}
   vp.addEventListener('pointerup',endDrag);vp.addEventListener('pointercancel',endDrag);
   vp.addEventListener('click',function(e){if(moved){e.preventDefault();e.stopPropagation();}},true);
   var rt;window.addEventListener('resize',function(){clearTimeout(rt);rt=setTimeout(function(){buildDots();render();},150);});
@@ -1241,7 +1219,7 @@ document.querySelectorAll('[data-sysc]').forEach(function(car){
   var sx=0,st=0,drag=false,moved=false;
   vp.addEventListener('pointerdown',function(e){drag=true;moved=false;sx=e.clientX;var mt=/translateX\((-?[\d.]+)px\)/.exec(track.style.transform);st=mt?parseFloat(mt[1]):0;track.style.transition='none';car.classList.add('grabbing');});
   vp.addEventListener('pointermove',function(e){if(!drag)return;var dx=e.clientX-sx;if(Math.abs(dx)>6)moved=true;track.style.transform='translateX('+(st+dx)+'px)';});
-  function endDrag(e){if(!drag)return;drag=false;track.style.transition='';car.classList.remove('grabbing');var dx=e.clientX-sx,m=metrics();if(moved){ if(Math.abs(dx)>m.cardW*0.2){index+=dx<0?1:-1;} render(); }}
+  function endDrag(e){if(!drag)return;drag=false;track.style.transition='';car.classList.remove('grabbing');var dx=e.clientX-sx,m=metrics();if(moved){ if(Math.abs(dx)>15){index+=dx<0?1:-1;} render(); }}
   vp.addEventListener('pointerup',endDrag); vp.addEventListener('pointercancel',endDrag);
   // stop a drag from triggering the Book-this link
   vp.addEventListener('click',function(e){if(moved){e.preventDefault();e.stopPropagation();}},true);
