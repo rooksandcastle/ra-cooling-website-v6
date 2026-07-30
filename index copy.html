@@ -155,6 +155,7 @@ nav{position:fixed;inset:0 0 auto;z-index:300;background:rgba(255,255,255,.92);b
 /* SYSTEMS — illustrated carousel (scoped: sysc-*) */
 #systems{background:var(--ice)}
 .sys-lead{font-size:17px;color:var(--ink-2);margin-bottom:28px;max-width:730px}
+.sys-cta-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
 .sys-lead b{color:var(--ink)}
 .sysc{position:relative;margin-bottom:26px}
 .sysc-viewport{overflow:hidden;cursor:grab}
@@ -597,7 +598,7 @@ footer a:hover{color:#fff}
 
 <!-- HERO -->
 <section id="home">
-  <img class="hero-bg-video" src="images/gpt-image-2_Photorealistic_ultra-wide_16_9_shot_of_a_bright_ultra-modern_luxury_London_livin-0.jpg" alt="" aria-hidden="true"/>
+  <img class="hero-bg-video" src="images/gpt-image-2_Photorealistic_ultra-wide_16_9_shot_of_a_bright_ultra-modern_luxury_London_livin-0.jpg" alt="" aria-hidden="true" fetchpriority="high" loading="eager"/>
   <div class="hero-overlay"></div>
   <div class="wrap">
     <div class="hero-content">
@@ -677,7 +678,7 @@ footer a:hover{color:#fff}
       <div class="ccar-viewport">
         <div class="ccar-track">
           <article class="svc-card">
-            <div class="svc-img"><img src="images/install.jpg" alt="Air conditioning installed in a modern London living room"/></div>
+            <div class="svc-img"><img src="images/install.jpg" alt="Air conditioning installed in a modern London living room" loading="lazy"/></div>
             <div class="svc-body">
               <div class="svc-ic"><svg class="ic" viewBox="0 0 24 24"><path d="M3 9.5 12 3l9 6.5"/><path d="M5 10v10h14V10"/><path d="M9 20v-6h6v6"/></svg></div>
               <h3>Installation</h3>
@@ -691,7 +692,7 @@ footer a:hover{color:#fff}
             </div>
           </article>
           <article class="svc-card">
-            <div class="svc-img"><img src="images/servicing.jpg" alt="Engineer servicing a wall-mounted air conditioning unit"/></div>
+            <div class="svc-img"><img src="images/servicing.jpg" alt="Engineer servicing a wall-mounted air conditioning unit" loading="lazy"/></div>
             <div class="svc-body">
               <div class="svc-ic"><svg class="ic" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
               <h3>Servicing &amp; maintenance</h3>
@@ -705,7 +706,7 @@ footer a:hover{color:#fff}
             </div>
           </article>
           <article class="svc-card">
-            <div class="svc-img"><img src="images/repairs.jpg" alt="Outdoor air conditioning condenser unit beside a house"/></div>
+            <div class="svc-img"><img src="images/repairs.jpg" alt="Outdoor air conditioning condenser unit beside a house" loading="lazy"/></div>
             <div class="svc-body">
               <div class="svc-ic"><svg class="ic" viewBox="0 0 24 24"><path d="M12 2v4M12 18v4M4.9 4.9l2.9 2.9M16.2 16.2l2.9 2.9M2 12h4M18 12h4M4.9 19.1l2.9-2.9M16.2 7.8l2.9-2.9"/></svg></div>
               <h3>Repairs</h3>
@@ -744,27 +745,27 @@ footer a:hover{color:#fff}
       <div class="sysc-viewport">
         <div class="sysc-track">
           <article class="sysc-card">
-            <div class="sysc-img"><img src="images/systems_images/wall-split.jpg" alt="Wall-mounted split air conditioning unit"/></div>
+            <div class="sysc-img"><img loading="lazy" src="images/systems_images/wall-split.jpg" alt="Wall-mounted split air conditioning unit"/></div>
             <div class="sysc-body"><span class="sysc-tag">Most popular</span><h3>Wall-mounted split</h3><p>The go-to choice for a single room &mdash; quiet, efficient and easy to control.</p><a href="#contact" class="sysc-book">Book this <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
           </article>
           <article class="sysc-card">
-            <div class="sysc-img"><img src="images/systems_images/heat-pump.jpg" alt="Air-to-air heat pump providing both heating and cooling"/></div>
+            <div class="sysc-img"><img loading="lazy" src="images/systems_images/heat-pump.jpg" alt="Air-to-air heat pump providing both heating and cooling"/></div>
             <div class="sysc-body"><span class="sysc-tag">Year-round</span><h3>Air-to-air heat pump</h3><p>One system that cools in summer and heats in winter &mdash; up to 3&ndash;4&times; more efficient than an electric heater.</p><a href="#contact" class="sysc-book">Book this <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
           </article>
           <article class="sysc-card">
-            <div class="sysc-img"><img src="images/systems_images/multi-split.jpg" alt="Multi-split system with one outdoor unit serving several rooms"/></div>
+            <div class="sysc-img"><img loading="lazy" src="images/systems_images/multi-split.jpg" alt="Multi-split system with one outdoor unit serving several rooms"/></div>
             <div class="sysc-body"><span class="sysc-tag">Whole home</span><h3>Multi-split</h3><p>One outdoor unit serving several indoor units &mdash; control each room independently.</p><a href="#contact" class="sysc-book">Book this <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
           </article>
           <article class="sysc-card">
-            <div class="sysc-img"><img src="images/systems_images/ducted.jpg" alt="Ducted and concealed ceiling air conditioning unit"/></div>
+            <div class="sysc-img"><img loading="lazy" src="images/systems_images/ducted.jpg" alt="Ducted and concealed ceiling air conditioning unit"/></div>
             <div class="sysc-body"><span class="sysc-tag">Discreet</span><h3>Ducted &amp; concealed</h3><p>Hidden away for a clean, minimal finish &mdash; we'll advise if it suits your space.</p><a href="#contact" class="sysc-book">Book this <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
           </article>
           <article class="sysc-card">
-            <div class="sysc-img"><img src="images/systems_images/cassette.jpg" alt="Recessed ceiling cassette air conditioning unit with four-way airflow"/></div>
+            <div class="sysc-img"><img loading="lazy" src="images/systems_images/cassette.jpg" alt="Recessed ceiling cassette air conditioning unit with four-way airflow"/></div>
             <div class="sysc-body"><span class="sysc-tag">Open spaces</span><h3>Ceiling cassette</h3><p>Even, four-way cooling for larger open-plan rooms and commercial areas.</p><a href="#contact" class="sysc-book">Book this <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
           </article>
           <article class="sysc-card">
-            <div class="sysc-img"><img src="images/systems_images/commercial.jpg" alt="Commercial air conditioning across a multi-storey building"/></div>
+            <div class="sysc-img"><img loading="lazy" src="images/systems_images/commercial.jpg" alt="Commercial air conditioning across a multi-storey building"/></div>
             <div class="sysc-body"><span class="sysc-tag">Business</span><h3>Commercial</h3><p>Comfortable, controlled temperatures for offices, shops and workspaces.</p><a href="#contact" class="sysc-book">Book this <svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a></div>
           </article>
         </div>
@@ -777,7 +778,10 @@ footer a:hover{color:#fff}
         </div>
       </div>
     </div>
-    <a href="#contact" class="btn btn-red reveal">Book a free survey</a>
+    <div class="sys-cta-row reveal">
+      <a href="#contact" class="btn btn-red">Get a free recommendation</a>
+      <a href="tel:+447480247540" class="btn btn-ghost">Call us to discuss</a>
+    </div>
   </div>
 </section>
 
@@ -871,16 +875,16 @@ footer a:hover{color:#fff}
     <div class="carousel-outer reveal">
       <div class="carousel-wrap">
         <div class="carousel-track">
-          <div class="carousel-slide"><img src="images/Actual work/IMG_4273.JPG" alt="Air conditioning installation by RA Cooling"/></div>
-          <div class="carousel-slide"><img src="images/Actual work/IMG_4274.JPG" alt="Air conditioning installation by RA Cooling"/></div>
-          <div class="carousel-slide"><img src="images/Actual work/1000009951.jpg" alt="Air conditioning installation by RA Cooling"/></div>
-          <div class="carousel-slide"><img src="images/Actual work/1000010421.jpg" alt="Air conditioning installation by RA Cooling"/></div>
-          <div class="carousel-slide"><img src="images/Actual work/b80840d2-bb22-4a50-a68f-db52b019dceb.jpg" alt="Air conditioning installation by RA Cooling"/></div>
-          <div class="carousel-slide"><img src="images/Actual work/1000010302.jpg" alt="Air conditioning installation by RA Cooling"/></div>
-          <div class="carousel-slide"><img src="images/Actual work/1000009696.jpg" alt="Air conditioning installation by RA Cooling"/></div>
-          <div class="carousel-slide"><img src="images/Actual work/1000010415.jpg" alt="Air conditioning installation by RA Cooling"/></div>
-          <div class="carousel-slide"><img src="images/Actual work/98e41e25-9255-4dd5-91d6-354724316521.jpg" alt="Air conditioning installation by RA Cooling"/></div>
-          <div class="carousel-slide"><img src="images/Actual work/1d95d54c-48a3-48cd-9e90-8e7613d95458.jpg" alt="Air conditioning installation by RA Cooling"/></div>
+          <div class="carousel-slide"><img loading="lazy" src="images/Actual work/IMG_4273.JPG" alt="Air conditioning installation by RA Cooling"/></div>
+          <div class="carousel-slide"><img loading="lazy" src="images/Actual work/IMG_4274.JPG" alt="Air conditioning installation by RA Cooling"/></div>
+          <div class="carousel-slide"><img loading="lazy" src="images/Actual work/1000009951.jpg" alt="Air conditioning installation by RA Cooling"/></div>
+          <div class="carousel-slide"><img loading="lazy" src="images/Actual work/1000010421.jpg" alt="Air conditioning installation by RA Cooling"/></div>
+          <div class="carousel-slide"><img loading="lazy" src="images/Actual work/b80840d2-bb22-4a50-a68f-db52b019dceb.jpg" alt="Air conditioning installation by RA Cooling"/></div>
+          <div class="carousel-slide"><img loading="lazy" src="images/Actual work/1000010302.jpg" alt="Air conditioning installation by RA Cooling"/></div>
+          <div class="carousel-slide"><img loading="lazy" src="images/Actual work/1000009696.jpg" alt="Air conditioning installation by RA Cooling"/></div>
+          <div class="carousel-slide"><img loading="lazy" src="images/Actual work/1000010415.jpg" alt="Air conditioning installation by RA Cooling"/></div>
+          <div class="carousel-slide"><img loading="lazy" src="images/Actual work/98e41e25-9255-4dd5-91d6-354724316521.jpg" alt="Air conditioning installation by RA Cooling"/></div>
+          <div class="carousel-slide"><img loading="lazy" src="images/Actual work/1d95d54c-48a3-48cd-9e90-8e7613d95458.jpg" alt="Air conditioning installation by RA Cooling"/></div>
         </div>
       </div>
       <div class="carousel-nav">
@@ -919,7 +923,7 @@ footer a:hover{color:#fff}
           <div><svg class="ic" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg>No hidden fees</div>
         </div>
       </div>
-      <div class="about-img reveal"><img src="images/about.jpg" alt="Air conditioning unit installed in a bright modern home"/></div>
+      <div class="about-img reveal"><img src="images/about.jpg" alt="Air conditioning unit installed in a bright modern home" loading="lazy"/></div>
     </div>
   </div>
 </section>
